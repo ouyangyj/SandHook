@@ -27,5 +27,4 @@ public class JniHooker {
             SandHook.callOriginByBackup(backup, thiz);
         }
     }
-
 }
