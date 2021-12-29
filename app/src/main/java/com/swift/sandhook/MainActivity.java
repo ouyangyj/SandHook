@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.swift.sandhook.test.Inter;
@@ -52,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         }, 3000);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
 
         final TestClass str = new TestClass(1);
 
@@ -90,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
         } catch (Throwable e) {
 
         }
+
+        WebView webView = findViewById(R.id.sample_webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://www.baidu.com");
     }
 
     public static Field getField(Class topClass, String fieldName) throws NoSuchFieldException {
