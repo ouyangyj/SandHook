@@ -28,5 +28,4 @@ public class PluginHooker {
     public static int testPluginHookBackup(Object thiz, Object test) {
         return testPluginHookBackup(thiz, test);
     }
-
 }
